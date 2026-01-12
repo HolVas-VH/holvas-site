@@ -1,0 +1,30 @@
+.hero {
+  min-height: 100vh;
+  padding-top: 70px;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 14px 30px;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+  border-radius: 6px;
+}

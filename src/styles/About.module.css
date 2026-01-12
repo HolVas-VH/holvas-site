@@ -1,0 +1,35 @@
+.about {
+  background: white;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.text p {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

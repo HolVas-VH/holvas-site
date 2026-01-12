@@ -1,0 +1,33 @@
+.services {
+  background: white;
+}
+
+.list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.service {
+  border: 1px solid #e5e7eb;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,65 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  font-size: 26px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 100px 30px;
+    gap: 25px;
+    transition: right 0.3s ease;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  }
+
+  .nav a.active {
+  color: #38f86b;
+  font-weight: 600;
+}
+
+
+  /* .nav.active {
+    right: 0;
+  } */
+}

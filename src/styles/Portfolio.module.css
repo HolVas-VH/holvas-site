@@ -1,0 +1,24 @@
+.portfolio {
+  background: #f8fafc;
+}
+
+.slide {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slide h3 {
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+}
