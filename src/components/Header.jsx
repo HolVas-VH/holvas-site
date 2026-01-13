@@ -1,20 +1,69 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Header.module.css";
+
+const menu = [
+  { id: "about", label: "studio" },
+  { id: "advantages", label: "atuty" },
+  { id: "services", label: "oferta" },
+  { id: "portfolio", label: "portfolio" },
+  { id: "prices", label: "cennik" },
+  { id: "contact", label: "kontakt" },
+];
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [active, setActive] = useState("about");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-50% 0px -50% 0px",
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>HolVas Digital Studio</div>
-      <nav className={`${styles.nav} ${openMenu ? styles.active : ""}`}>
-        <a href="#about">studio</a>
-        <a href="#advantages">atuty</a>
-        <a href="#services">oferta</a>
-        <a href="#portfolio">portfolio</a>
-        <a href="#prices">cennik</a>
-        <a href="#contact">kontakt</a>
+      <div className={styles.logo}>
+        <a href="#hero">HolVas Digital Studio</a>
+      </div>
+
+      {/* CONTACT DESKTOP */}
+      <div className={styles.contact}>
+        <a href="tel:+48736222757">+48 736 222 757</a>
+        <a href="mailto:holvascompany@gmail.com">
+          holvascompany@gmail.com
+        </a>
+      </div>
+
+      <nav className={`${styles.nav} ${openMenu ? styles.navActive : ""}`}>
+        {menu.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            onClick={() => setOpenMenu(false)}
+            className={`${styles.link} ${
+              active === item.id ? styles.active : ""
+            }`}
+          >
+            {item.label}
+            {active === item.id && <span className={styles.dot} />}
+          </a>
+        ))}
       </nav>
+
       <button
         className={styles.burger}
         onClick={() => setOpenMenu(!openMenu)}
@@ -24,66 +73,3 @@ export default function Header() {
     </header>
   );
 }
-
-
-// import { useEffect, useState } from "react";
-// import styles from "../styles/Header.module.css";
-// const sections = ["about", "advantages", "services", "portfolio", "prices", "contact"];
-// // "studio", "atuty", "oferta", "portfolio", "cennik", "kontakt"
-
-// export default function Header() {
-//   const [active, setActive] = useState("");
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach(entry => {
-//           if (entry.isIntersecting) {
-//             setActive(entry.target.id);
-//           }
-//         });
-//       },
-//       { threshold: 0.6 }
-//     );
-
-//     sections.forEach(id => {
-//       const el = document.getElementById(id);
-//       if (el) observer.observe(el);
-//     });
-
-//     return () => observer.disconnect();
-//   }, []);
-
-//   return (
-//     <header className={styles.header}>
-//       <div className={styles.logo}>HolVas</div>
-//       <nav className={styles.nav}>
-//         {sections.map(id => (
-//           <a
-//             key={id}
-//             href={`#${id}`}
-//             className={active === id ? styles.active : ""}
-//           >
-//             {id}
-//           </a>
-//         ))}
-//       </nav>
-//     </header>
-//   );
-// }
-
-// export default function Header() {
-//     return (
-//         <header className="header">
-//       <div className="container">
-//         <div className="logo">HolVas</div>
-//         <nav className="nav">
-//           <a href="#about">Pro Studio</a>
-//           <a href="#portfolio">Prtfolio</a>
-//           <a href="#price">Oferta</a>
-//           <a href="#contact">Kontakt</a>
-//         </nav>
-//       </div>
-//     </header>
-//   );
-// }
