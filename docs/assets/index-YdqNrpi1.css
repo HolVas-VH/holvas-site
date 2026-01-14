@@ -94,7 +94,7 @@
     font-size: 0;
   }
 
-  ._contact_695qe_45 a [href^="tel"]:before {
+  /* ._contact_695qe_45 a [href^="tel"]:before {
     content: "📞";
     font-size: 18px;
   }
@@ -102,7 +102,29 @@
   ._contact_695qe_45 a [href^="mailto"]:before {
     content: "📤";
     font-size: 18px;
-  }
+  } */
+  /* ._contact_695qe_45 a[href^=tel]:before{content:"📞";font-size:18px}._contact_695qe_45 a[href^=mailto]:before{content:"📤";font-size:18px} */
+
+a[href^="tel"]::before,
+a[href^="mailto"]::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+a[href^="tel"]::before {
+  background-image: url("../assets/icons/phone.png");
+}
+
+a[href^="mailto"]::before {
+  background-image: url("../assets/icons/mail.png");
+}
 
   ._nav_695qe_71 {
     position: fixed;
@@ -185,6 +207,8 @@
   width: 100%;
   border-radius: 14px;
 }
+
+/* Mobile styles */
 @media (max-width: 768px) {
   ._container_1fmvq_9 {
     grid-template-columns: 1fr;
