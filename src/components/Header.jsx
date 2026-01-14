@@ -15,23 +15,27 @@ const menu = [
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const [active, setActive] = useState("about");
+  const [closing, setClosing] = useState(false); // для плавного закриття мобільного меню
+
+  // Плавне закриття меню
+  const closeMenuSmooth = () => {
+    setClosing(true);
+    setTimeout(() => {
+      setOpenMenu(false);
+      setClosing(false);
+    }, 1000); // має співпадати з CSS transition
+  };
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
+          if (entry.isIntersecting) setActive(entry.target.id);
         });
       },
-      {
-        rootMargin: "-50% 0px -50% 0px",
-      }
+      { rootMargin: "-50% 0px -50% 0px" }
     );
-
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
@@ -60,12 +64,14 @@ export default function Header() {
         </a>
       </div>
 
-      <nav className={`${styles.nav} ${openMenu ? styles.navActive : ""}`}>
+      <nav className={`${styles.nav} ${openMenu ? styles.navActive : ""} ${
+        closing ? styles.closing : ""
+      }`}>
         {menu.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
-            onClick={() => setOpenMenu(false)}
+            onClick={closeMenuSmooth}
             className={`${styles.link} ${
               active === item.id ? styles.active : ""
             }`}

@@ -1,4 +1,88 @@
+/* Загальний футер */
 .footer {
+  background-color: #111; /* або твій колір */
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  font-family: sans-serif;
+}
+
+/* Ліва колонка - по центру */
+.footer .left-column {
+  text-align: center;
+}
+
+/* Середній блок: меню + контакти */
+.footer .middle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* обмеження по ширині */
+  gap: 20px;
+  flex-wrap: wrap; /* щоб на мобільних переходило в колонку */
+}
+
+/* Меню футера */
+.footer .footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer .footer-menu a:hover {
+  color: #31dc01; /* колір при наведенні */
+}
+
+/* Контакти футера */
+.footer .footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .footer-contacts a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .footer-contacts a:hover {
+  color: #31dc01;
+}
+
+/* Нижня частина футера - по центру */
+.footer .bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Мобільні стилі */
+@media (max-width: 768px) {
+  .footer .middle {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer .footer-menu,
+  .footer .footer-contacts {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+/* .footer {
   background: #0f0f0f;
   color: #fff;
   padding: 60px 20px 20px;
@@ -55,4 +139,4 @@
   text-align: center;
   font-size: 13px;
   color: #aaa;
-}
+} */
