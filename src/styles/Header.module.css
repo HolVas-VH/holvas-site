@@ -19,17 +19,21 @@
   color: #000;
 }
 
-/* CONTACT */
-.contact {
+/* CONTACTS */
+.contactsDesktop {
   display: flex;
   gap: 20px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.contact a {
+.contactsDesktop a {
   color: #555;
   text-decoration: none;
+}
+
+.contactsMobile {
+  display: none;
 }
 
 /* NAV */
@@ -73,46 +77,35 @@
   border: none;
 }
 
-/* MOBILE */
+/* MOBILE NAV */
 @media (max-width: 768px) {
   .burger {
     display: block;
   }
 
-  .contact {
-    position: fixed;
+  .contactsDesktop {
+    display: none;
+  }
+
+  .contactsMobile {
+    display: flex;     /* !!! обовʼязково для gap */
+    position: fixed;   /* відносно вікна браузера */
     bottom: 20px;
     left: 20px;
-    gap: 15px;
-  }
+    gap: 16px;
+    z-index: 1000;     /* щоб не ховалося за іншими блоками */
+}
 
-  .contact a {
-    width: 40px;
-    height: 40px;
-    background: #31dc01;
-    color: #000;
+  /* .contactsMobile {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 0;
-  }
-
-  /* .contact a[href^="tel"]::before {
-    content: "📞";
-    font-size: 18px;
-  }
-
-  .contact a[href^="mailto"]::before {
-    content: "📤";
-    font-size: 18px;
+    gap: 16px;
+    margin-top: 30px;
   } */
-   a[href^="tel"]::before {
-  background-image: url("../assets/icons/telephone_32-removebg.png");
-}
-  a[href^="mailto"]::before {
-  background-image: url("../assets/icons/mail_32-removebg.png");
-}
+
+  .contactsMobile img {
+    width: 24px;
+    height: 24px;
+  }
 
   .nav {
     position: fixed;
@@ -126,12 +119,16 @@
     align-items: center;
     /* padding: 100px 30px; */
     gap: 25px;
-    transition: right 0.3s ease;
+    transition: right 0.6s ease, opacity 0.6s ease;
+    opacity: 0;  /* за замовчуванням прозоре */
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    pointer-events: none; /* не можна клікати поки невидиме */
   }
 
   .navActive {
     right: 0;
+    opacity: 1;
+    pointer-events: auto; /* можна клікати */
   }
 
   /* DOT MOBILE (LEFT) */

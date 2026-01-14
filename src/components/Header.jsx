@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import phoneIcon from "../assets/icons/phone_32-removebg.png";
+import mailIcon from "../assets/icons/mail_32-removebg.png";
 import styles from "../styles/Header.module.css";
 
 const menu = [
@@ -41,10 +43,20 @@ export default function Header() {
       </div>
 
       {/* CONTACT DESKTOP */}
-      <div className={styles.contact}>
+      <div className={styles.contactsDesktop}>
         <a href="tel:+48736222757">+48 736 222 757</a>
         <a href="mailto:holvascompany@gmail.com">
           holvascompany@gmail.com
+        </a>
+      </div>
+
+      {/* CONTACT MOBILE*/}
+      <div className={styles.contactsMobile}>
+        <a href="tel:+48736222757" aria-label="Call us">
+          <img src={phoneIcon} alt="phone" />
+        </a>
+        <a href="mailto:holvascompany@gmail.com" aria-label="Send email">
+          <img src={mailIcon} alt="mail letter" />
         </a>
       </div>
 
