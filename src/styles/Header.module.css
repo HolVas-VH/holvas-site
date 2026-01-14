@@ -98,7 +98,7 @@
     font-size: 0;
   }
 
-  .contact a[href^="tel"]::before {
+  /* .contact a[href^="tel"]::before {
     content: "📞";
     font-size: 18px;
   }
@@ -106,17 +106,25 @@
   .contact a[href^="mailto"]::before {
     content: "📤";
     font-size: 18px;
-  }
+  } */
+   a[href^="tel"]::before {
+  background-image: url("../assets/icons/telephone_32-removebg.png");
+}
+  a[href^="mailto"]::before {
+  background-image: url("../assets/icons/mail_32-removebg.png");
+}
 
   .nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 100%;
     height: 100vh;
     background: #fff;
     flex-direction: column;
-    padding: 100px 30px;
+    justify-content: center;
+    align-items: center;
+    /* padding: 100px 30px; */
     gap: 25px;
     transition: right 0.3s ease;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
