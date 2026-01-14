@@ -119,16 +119,15 @@ a[href^="mailto"]::before {
 }
 
 a[href^="tel"]::before {
-  background-image: url("../assets/icons/phone.png");
+  background-image: url("../assets/icons/telephone_32-removebg.png");
 }
 
 a[href^="mailto"]::before {
-  background-image: url("../assets/icons/mail.png");
+  background-image: url("../assets/icons/mail_32-removebg.png");
 }
 
   ._nav_695qe_71 {
     position: fixed;
-    top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
