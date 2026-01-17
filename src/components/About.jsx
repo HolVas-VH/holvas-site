@@ -1,3 +1,4 @@
+import logoImg from "../assets/images/logo_hv-removebg.png";
 import styles from "../styles/About.module.css";
 
 export default function About() {
@@ -16,7 +17,8 @@ export default function About() {
         </div>
 
         <div className={styles.image}>
-          <img src="/assets/about.jpg" alt="HolVas Digital Studio" />
+          <img src={logoImg} alt="HolVas Digital Studio" />
+          {/*import logoImg from "../assets/images/logo_hv-removebg.png";*/}
         </div>
       </div>
     </section>

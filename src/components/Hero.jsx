@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
       <h1>HolVas Digital Studio</h1>
-      <p>Цифрові рішення для вашого бізнесу</p>
-      <button>Замовити консультацію</button>
+      <p>Rozwiązania cyfrowe dla Twojej firmy</p>
+      <button>Zamów konsultację</button>
     </section>
   );
 }
