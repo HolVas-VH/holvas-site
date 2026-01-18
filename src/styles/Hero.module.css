@@ -1,8 +1,8 @@
 .hero {
   min-height: 100vh;
   padding-top: 70px;
-  /* background: linear-gradient(135deg, #0f172a, #020617); */
-  background-image: url('../assets/images/hero.jpg');
+  background: linear-gradient(135deg, #0f172a, #020617);
+  /* background-image: url('../assets/images/hero.jpg'); */
   background-size: cover;
   background-position: contain;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: #fff; 
 }
 
 .hero h1 {
