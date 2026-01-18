@@ -1,4 +1,4 @@
-import logoImg from "../assets/images/logo_hv-removebg.png";
+import logoImg from "../assets/icons/logo-long_hv.svg";
 import styles from "../styles/About.module.css";
 
 export default function About() {

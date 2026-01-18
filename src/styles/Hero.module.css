@@ -1,7 +1,11 @@
 .hero {
   min-height: 100vh;
   padding-top: 70px;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  /* background: linear-gradient(135deg, #0f172a, #020617); */
+  background-image: url('../assets/images/hero.jpg');
+  background-size: cover;
+  background-position: contain;
+  background-repeat: no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
@@ -10,21 +14,40 @@
   text-align: center;
 }
 
+/* кольорова підложка */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* чорна з прозорістю */
+}
+
+/* контент поверх підложки */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  z-index: 10;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 24px;
   max-width: 600px;
   margin-bottom: 30px;
+  z-index: 10;
 }
 
 .hero button {
-  padding: 14px 30px;
-  background: #31dc01 ;
-  color: #020617;
+  padding: 24px 40px;
+  background: hsla(107, 99%, 43%, 0.86);
+  color: #242424;
   font-weight: 600;
+  font-size: 16px;
   border-radius: 6px;
+  z-index: 10;
 }
