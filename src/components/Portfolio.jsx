@@ -6,11 +6,35 @@ import "swiper/css/pagination";
 import styles from "../styles/Portfolio.module.css";
 
 export default function Portfolio() {
+  // const projects = [
+  //   { title: "Проект 1", image: placeholderFirst },
+  //   { title: "Проект 2", image: placeholderSecond },
+  //   { title: "Проект 3", image: placeholderThree },
+  // ];
+
   const projects = [
-    { title: "Проект 1", image: "/assets/project1.jpg" },
-    { title: "Проект 2", image: "/assets/project2.jpg" },
-    { title: "Проект 3", image: "/assets/project3.jpg" },
-  ];
+  {
+    title: "Проект 1",
+    image: new URL(
+      '../assets/images/placeholder_768x640.webp',
+      import.meta.url
+    ).href,
+  },
+  {
+    title: "Проект 2",
+    image: new URL(
+      '../assets/images/placeholder_768x640.webp',
+      import.meta.url
+    ).href,
+  },
+  {
+    title: "Проект 3",
+    image: new URL(
+      '../assets/images/placeholder_768x640.webp',
+      import.meta.url
+    ).href,
+  },
+];
 
   return (
     <section id="portfolio" className={styles.portfolio}>
@@ -21,7 +45,7 @@ export default function Portfolio() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 4500 }}
         loop={true}
         style={{ padding: "20px 0" }}
       >

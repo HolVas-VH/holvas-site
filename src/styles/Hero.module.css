@@ -14,6 +14,10 @@
   text-align: center;
 }
 
+.heroPmobile {
+    display: none;
+  }
+
 /* кольорова підложка */
 .hero::before {
   content: '';
@@ -61,4 +65,15 @@
 button:focus,
 button:focus-visible {
   outline: 4px auto #31dc0179;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .heroPmobile {
+    display: block;
+  }
+
+  .heroPdesc {
+    display: none;
+  }
 }
