@@ -12,6 +12,11 @@
   z-index: 1000;
 }
 
+.logoImg {
+  width: 150px;
+  height: auto; 
+}
+
 .logo a {
   font-weight: 700;
   font-size: 18px;

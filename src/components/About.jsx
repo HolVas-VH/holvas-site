@@ -10,6 +10,15 @@ export default function About() {
           <p>
             HolVas — це Digital Studio, в якій команда створює сучасні веб-рішення
             для бізнесу: сайти, додатки, брендинг, SEO та цифровий маркетинг.
+
+            HolVas — rozwiązania cyfrowe dla Twojej firmy  
+            W HolVas wierzymy, że skuteczne rozwiązania cyfrowe zaczynają się od głębokiego zrozumienia biznesu, 
+            a nie wyłącznie od technologii. Wspieramy firmy w Polsce oraz na terenie całej Europy, pomagając im 
+            przekształcać cele biznesowe w stabilne, skalowalne i realnie działające produkty cyfrowe. Projektujemy 
+            i wdrażamy nowoczesne aplikacje webowe, systemy biznesowe oraz rozwiązania dopasowane do indywidualnych 
+            potrzeb klientów. Naszą siłą jest partnerskie podejście, elastyczność oraz szybka reakcja na zmieniające 
+            się wymagania rynku. Dzięki doświadczeniu i pracy zgodnej z europejskimi standardami, HolVas staje się 
+            zaufanym partnerem w długofalowej transformacji cyfrowej.
           </p>
           <p>
             Ми працюємо системно, прозоро та з фокусом на результат.
@@ -18,7 +27,6 @@ export default function About() {
 
         <div className={styles.image}>
           <img src={logoImg} alt="HolVas Digital Studio" />
-          {/*import logoImg from "../assets/images/logo_hv-removebg.png";*/}
         </div>
       </div>
     </section>

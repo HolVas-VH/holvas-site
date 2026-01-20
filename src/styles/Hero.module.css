@@ -44,10 +44,21 @@
 
 .hero button {
   padding: 24px 40px;
-  background: hsla(107, 99%, 43%, 0.86);
+  background: #ffd91a;
   color: #242424;
   font-weight: 600;
   font-size: 16px;
+  border: 2px solid #ffd91a;
   border-radius: 6px;
+  border-color: #31dc0179;
   z-index: 10;
+}
+
+.hero>button:hover {
+  background: #ffd91a7c;
+  color:azure;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto #31dc0179;
 }

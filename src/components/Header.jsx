@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import phoneIcon from "../assets/icons/phone_32-removebg.png";
 import mailIcon from "../assets/icons/mail_32-removebg.png";
+import logoImg from "../assets/icons/logo-long_hv.svg";
 import styles from "../styles/Header.module.css";
 
 const menu = [
@@ -43,7 +44,10 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <a href="#hero">HolVas Digital Studio</a>
+        {/* <a href="#hero">HolVas Digital Studio</a> */}
+        <a href="#hero">
+          <img src={logoImg} className={styles.logoImg}alt="HolVas Digital Studio" />
+        </a>
       </div>
 
       {/* CONTACT DESKTOP */}
