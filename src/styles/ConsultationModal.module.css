@@ -1,0 +1,160 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  position: relative;
+  background: #020617;
+  color: white;
+  padding: 30px;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  border-radius: 0;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+ button {
+    cursor: pointer;
+    border: 2px solid #ffd91a;
+    border-radius: 6px;
+    background: #31dc01;
+    color: #0e0e0e;
+    font-weight: 600;
+    padding: 15px 24px;
+ }
+ 
+ button:hover {
+  background: #ffd91a7c;
+  border-color: #31dc0179;
+  color:#e5e7eb;
+}
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10%;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #ffd91a;
+  cursor: pointer;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #31dc01;
+}
+
+.row input[type="checkbox"]:hover {
+    border-color: #31dc01;
+}
+
+.success {
+  text-align: center;
+  font-size: 18px;
+  color: #31dc01;
+}
+
+/* Dropdown для select */
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 6px;
+  z-index: 10;
+  padding: 10px;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  /* gap: 0 20px; */
+  margin: 0 10px 20px 0;
+  flex-direction: column;
+}
+
+/* Кастомні чекбокси */
+.dropdownItem input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ffd91a;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  transition: all .2s ease;
+}
+
+.dropdownItem input[type="checkbox"]:hover {
+  border-color: #31dc01;
+}
+
+.dropdownItem input[type="checkbox"]:checked {
+  background: #ffd91a;
+  border-color: #31dc01;;
+}
+
+.dropdownItem input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  left: 3px;
+  top: -1px;
+  font-size: 16px;
+  color: #020617;
+  font-weight: bold;
+}
+
+/* Текст поруч */
+.dropdownItem span {
+  font-size: 16px;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+/* Tablet */
+@media(max-width:1024px){
+  .modal { padding: 20px; }
+}
+
+/* Mobile M */
+@media(max-width:768px){
+  .modal { padding: 15px; }
+}
+
+/* Mobile S */
+@media(max-width:420px){
+  .modal { padding: 10px; }
+}

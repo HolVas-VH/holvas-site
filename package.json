@@ -7,11 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build -- --outDir docs",
-    "deploy": "gh-pages -d docs -b gh-pages"
+    "preview": "vite preview"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "swiper": "^12.0.3"

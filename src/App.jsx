@@ -8,6 +8,8 @@ import Price from "./components/Price";      // Аккордеон
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import ConsultationModal from "./components/ConsultationModal";
+
 export default function App() {
   return (
     <>
@@ -21,32 +23,11 @@ export default function App() {
         <Price />
         <Contact />
       </main>
+
+    {/* Підключаємо модалку */}
+      <ConsultationModal />
+
       <Footer />
-    </>
+    </> 
   );
 }
-
-
-// import Header from "./components/Header";
-// import Hero from "./components/Hero";
-// import About from "./components/About";
-// import Portfolio from "./components/Portfolio";
-// import Price from "./components/Price";
-// import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
-
-// import "./styles/main.css";
-
-// export default function App() {
-//   return (
-//     <>
-//       <Header />
-//       <Hero />
-//       <About />
-//       <Portfolio />
-//       <Price />
-//       <Footer />
-//       <Contact />
-//     </>
-//   );
-// }

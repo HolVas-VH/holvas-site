@@ -15,7 +15,7 @@ export default function Hero() {
       <p className={styles.heroPmobile}>
         Tworzymy nowoczesne rozwiązania cyfrowe, <br/>które wspierają rozwój biznesu w Polsce i w całej Europie. 
       </p>
-      <button>Zamów konsultację</button>
+      <button id="consultation">Zamów konsultację</button>
     </section>
   );
 }
