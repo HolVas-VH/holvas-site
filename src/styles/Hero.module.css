@@ -1,11 +1,12 @@
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   padding-top: 70px;
-  background: linear-gradient(135deg, #0f172a, #020617);
-  /* background-image: url('../assets/images/hero.jpg'); */
+  /* background: linear-gradient(135deg, #0f172a, #020617); 
   background-size: cover;
   background-position: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
   color: white;
   display: flex;
   flex-direction: column;
@@ -13,6 +14,16 @@
   justify-content: center;
   text-align: center;
 }
+
+
+  .heroBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 
 .heroPmobile {
     display: none;
@@ -76,4 +87,6 @@ button:focus-visible {
   .heroPdesc {
     display: none;
   }
+
 }
+

@@ -28,7 +28,7 @@ export default function ConsultationModal() {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <button className={styles.close} onClick={() => setOpen(false)}>X</button>
+        <button className={styles.close} onClick={() => setOpen(false)}>x</button>
         <h2>Nie zwlekaj – zamów usługi IT HolVas</h2>
         <Form onSuccess={() => setOpen(false)} />
       </div>
