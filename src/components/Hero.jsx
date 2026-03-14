@@ -12,7 +12,7 @@ export default function Hero() {
         loading="eager"
         fetchpriority="high"
       />
-      <h1>HolVas Digital Studio</h1>
+      <h1>Digital Studio "HolVas"</h1>
       <p className={styles.heroPdesc}>
         Tworzymy nowoczesne rozwiązania cyfrowe,<br/> które wspierają rozwój biznesu w Polsce i w całej Europie, 
         łącząc technologię z realnymi potrzebami firm. Działamy jako partnerzy — projektujemy stabilne, 
